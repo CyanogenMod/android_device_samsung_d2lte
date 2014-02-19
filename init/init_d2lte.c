@@ -73,7 +73,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
         property_set("ro.telephony.default_cdma_sub", "0");
-    } else if (strstr(bootloader, "R530M")) {
+    } else if (strstr(bootloader, "SC06D")) {
+        /* d2dcm */
+        property_set("ro.build.fingerprint", "samsung/d2om/d2dcm:4.1.2/JZO54K/SC06DOMBMF1:user/release-keys");
+        property_set("ro.build.description", "d2om-user 4.1.2 JZO54K SC06DOMBMF1 release-keys");
+        property_set("ro.product.model", "SC-06D");
+        property_set("ro.product.device", "d2dcm");
+        property_set("ro.ril.enable.dcm.feature", "1");
+        property_set("telephony.lteOnGsmDevice", "1");
+        property_set("ro.telephony.default_network", "9");
+    }  else if (strstr(bootloader, "R530M")) {
         /* d2mtr */
         property_set("ro.build.fingerprint", "samsung/d2mtr/d2mtr:4.1.2/JZO54K/R530MVQAMF2:user/release-keys");
         property_set("ro.build.description", "d2mtr-user 4.1.2 JZO54K R530MVQAMF2 release-keys");
