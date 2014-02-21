@@ -62,6 +62,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "d2uc-user 4.1.2 JZO54K I747UCDMG2 release-keys");
         property_set("telephony.lteOnGsmDevice", "1");
         property_set("ro.telephony.default_network", "9");
+        property_set("ro.preferred_apn", "pta,310,410");
     } else if (strstr(bootloader, "R530C")) {
         /* d2cri */
         property_set("ro.build.fingerprint", "samsung/d2cri/d2cri:4.1.2/JZO54K/R530CVVBMD6:user/release-keys");
@@ -94,6 +95,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "d2tmo");
         property_set("telephony.lteOnGsmDevice", "1");
         property_set("ro.telephony.default_network", "9");
+        property_set("ro.preferred_apn", "fast.t-mobile.com,310,260");
     } else if (strstr(bootloader, "R530U")) {
         /* d2usc */
         property_set("ro.build.fingerprint", "samsung/d2usc/d2usc:4.1.1/JRO03L/R530UVXALK5:user/release-keys");
