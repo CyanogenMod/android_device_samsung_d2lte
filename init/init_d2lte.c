@@ -68,6 +68,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "d2cri-user 4.1.2 JZO54K R530CVVBMD6 release-keys");
         property_set("ro.product.model", "SCH-R530C");
         property_set("ro.product.device", "d2cri");
+        property_set("ro.cdma.home.operator.alpha", "Cricket");
+        property_set("ro.cdma.home.operator.numeric", "310090");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
         property_set("ro.telephony.default_cdma_sub", "0");
@@ -77,6 +79,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "d2mtr-user 4.1.2 JZO54K R530MVQAMF2 release-keys");
         property_set("ro.product.model", "SCH-R530M");
         property_set("ro.product.device", "d2mtr");
+        property_set("ro.cdma.home.operator.alpha", "MetroPCS");
+        property_set("ro.cdma.home.operator.numeric", "311660");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
         property_set("ro.telephony.default_cdma_sub", "0");
@@ -102,6 +106,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "d2usc-user 4.1.1 JRO03L R530UVXALK5 release-keys");
         property_set("ro.product.model", "SCH-R530U");
         property_set("ro.product.device", "d2usc");
+        property_set("ro.cdma.home.operator.alpha", "U.S.Cellular");
+        property_set("ro.cdma.home.operator.numeric", "311580");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
         property_set("telephony.sms.pseudo_multipart", "1");
