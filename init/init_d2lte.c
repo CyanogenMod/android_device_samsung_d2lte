@@ -70,6 +70,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "d2cri");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
+        property_set("ro.telephony.default_cdma_sub", "0");
     } else if (strstr(bootloader, "R530M")) {
         /* d2mtr */
         property_set("ro.build.fingerprint", "samsung/d2mtr/d2mtr:4.1.2/JZO54K/R530MVQAMF2:user/release-keys");
@@ -78,6 +79,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "d2mtr");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
+        property_set("ro.telephony.default_cdma_sub", "0");
     } else if (strstr(bootloader, "L710")) {
         /* d2spr */
         property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.1.2/JZO54K/L710VPBMD4:user/release-keys");
@@ -103,6 +105,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "8");
         property_set("telephony.sms.pseudo_multipart", "1");
+        property_set("ro.telephony.default_cdma_sub", "0");
     } else if (strstr(bootloader, "I535")) {
         /* d2vzw */
         property_set("ro.build.fingerprint", "Verizon/d2vzw/d2vzw:4.3/JSS15J/I535VRUCML1:user/release-keys");
