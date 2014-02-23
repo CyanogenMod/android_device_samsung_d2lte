@@ -26,4 +26,7 @@
    <!-- Cancel autofocus if preview stopped. If camera HAL does not support
         it set this value to false -->
     <bool name="cancelAutoFocusOnPreviewStopped">false</bool>
+
+   <!-- Samsung Camcorder Mode -->
+    <bool name="needsSamsungCamMode">true</bool>
 </resources>
