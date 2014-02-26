@@ -73,8 +73,10 @@ lib/libqcci_legacy.so
 lib/libqmi_client_qmux.so
 lib/libomission_avoidance.so
 lib/libfactoryutil.so
-lib/libril-qc-qmi-1.so
-lib/libril.so
+blobs/cdma/lib/libril-qc-qmi-1.so:blobs/cdma/lib/libril-qc-qmi-1.so
+blobs/gsm/lib/libril-qc-qmi-1.so:blobs/gsm/lib/libril-qc-qmi-1.so
+blobs/cdma/lib/libril.so:blobs/cdma/lib/libril.so
+blobs/gsm/lib/libril.so:blobs/gsm/lib/libril.so
 
 
 # GPS
