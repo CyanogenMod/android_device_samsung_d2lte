@@ -73,9 +73,10 @@ lib/libqcci_legacy.so
 lib/libqmi_client_qmux.so
 lib/libomission_avoidance.so
 lib/libfactoryutil.so
-lib/libril-qc-qmi-1.so
-lib/libril.so
-
+blobs/cdma/lib/libril-qc-qmi-1.so
+blobs/cdma/lib/libril.so
+blobs/gsm/lib/libril-qc-qmi-1.so
+blobs/gsm/lib/libril.so
 
 # GPS
 lib/libgeofence.so
@@ -143,9 +144,11 @@ etc/wifi/bcmdhd_sta.bin_b2
 etc/wifi/bcmdhd_mfg.bin_b2
 etc/wifi/nvram_mfg.txt
 etc/wifi/nvram_mfg.txt_murata
+etc/wifi/nvram_mfg.txt_murata_b2
 etc/wifi/nvram_mfg.txt:etc/wifi/nvram_mfg.txt_semcosh
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_net.txt_murata
+etc/wifi/nvram_net.txt_murata_b2
 etc/wifi/nvram_net.txt:etc/wifi/nvram_net.txt_semcosh
 etc/wifi/wpa_supplicant.conf
 
