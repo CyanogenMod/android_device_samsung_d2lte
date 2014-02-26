@@ -102,3 +102,6 @@ ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 # Assert
 TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2tmo,d2cri,d2mtr,d2usc,d2vzw,d2lte
 endif
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/d2lte/releasetools
