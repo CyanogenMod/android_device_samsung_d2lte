@@ -154,6 +154,17 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.home.operator.numeric", "311480");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "10");
+    } else if (strstr(bootloader, "S968C")) {
+        /* d2vzw - straighttalk */
+        property_set("ro.build.fingerprint", "Verizon/d2vzw/d2vzw:4.3/JSS15J/I535VRUCML1:user/release-keys");
+        property_set("ro.build.description", "d2vzw-user 4.3 JSS15J I535VRUCML1 release-keys");
+        property_set("ro.product.model", "SCH-S968C");
+        property_set("ro.product.device", "d2vzw");
+        property_set("ro.telephony.default_cdma_sub", "1");
+        property_set("ro.cdma.home.operator.alpha", "TracFone");
+        property_set("ro.cdma.home.operator.numeric", "310000");
+        property_set("telephony.lteOnCdmaDevice", "1");
+        property_set("ro.telephony.default_network", "4");
     }
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
