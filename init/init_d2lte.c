@@ -54,12 +54,20 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "I747")) {
+    if (strstr(bootloader, "I747M")) {
+        /* d2can */
+        property_set("ro.build.fingerprint", "samsung/d2vl/d2can:4.3/JSS15J/I747MVLUEMK5:user/release-keys");
+        property_set("ro.build.description", "d2vl-user 4.3 JSS15J I747MVLUEMK5 release-keys");
+        property_set("ro.product.device", "d2can");
+        property_set("ro.product.model", "SGH-I747M");
+        property_set("telephony.lteOnGsmDevice", "1");
+        property_set("ro.telephony.default_network", "9");
+    } else if (strstr(bootloader, "I747")) {
         /* d2att */
+        property_set("ro.build.fingerprint", "samsung/d2uc/d2att:4.3/JSS15J/I747UCUEMJB:user/release-keys");
+        property_set("ro.build.description", "d2uc-user 4.3 JSS15J I747UCUEMJB release-keys");
         property_set("ro.product.device", "d2att");
-        property_set("ro.product.model", "SGH-I747");
-        property_set("ro.build.fingerprint", "samsung/d2uc/d2att:4.1.2/JZO54K/I747UCDMG2:user/release-keys");
-        property_set("ro.build.description", "d2uc-user 4.1.2 JZO54K I747UCDMG2 release-keys");
+        property_set("ro.product.model", "SAMSUNG-SGH-I747");
         property_set("telephony.lteOnGsmDevice", "1");
         property_set("ro.telephony.default_network", "9");
     } else if (strstr(bootloader, "R530C")) {
@@ -95,8 +103,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.telephony.default_cdma_sub", "0");
     } else if (strstr(bootloader, "L710")) {
         /* d2spr */
-        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.1.2/JZO54K/L710VPBMD4:user/release-keys");
-        property_set("ro.build.description", "d2spr-user 4.1.2 JZO54K L710VPBMD4 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.3/JSS15J/L710VPUCMK3:user/release-keys");
+        property_set("ro.build.description", "d2spr-user 4.3 JSS15J L710VPUCMK3 release-keys");
         property_set("ro.product.model", "SPH-L710");
         property_set("ro.product.device", "d2spr");
         property_set("ro.cdma.home.operator.alpha", "Sprint");
@@ -106,8 +114,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.telephony.default_network", "8");
     } else if (strstr(bootloader, "T999")) {
         /* d2tmo */
-        property_set("ro.build.fingerprint", "samsung/d2uc/d2att:4.1.2/JZO54K/T999UVDMD5:user/release-keys");
-        property_set("ro.build.description", "d2uc-user 4.1.2 JZO54K T999UVDMD5 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2tmo/d2tmo:4.3/JSS15J/T999UVUEMJC:user/release-keys");
+        property_set("ro.build.description", "d2tmo-user 4.3 JSS15J T999UVUEMJC release-keys");
         property_set("ro.product.model", "SGH-T999");
         property_set("ro.product.device", "d2tmo");
         property_set("telephony.lteOnGsmDevice", "1");
