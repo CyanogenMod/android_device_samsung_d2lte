@@ -64,7 +64,8 @@ on init
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
-    setprop persist.sys.ssr.restart_level 1
+    setprop persist.sys.ssr.restart_level 3
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
     chown system graphics /sys/class/graphics/fb1/hpd
     chown system graphics /sys/class/graphics/fb1/vendor_name
     chown system graphics /sys/class/graphics/fb1/product_description
