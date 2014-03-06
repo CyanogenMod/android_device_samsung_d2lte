@@ -79,8 +79,13 @@ blobs/gsm/lib/libril-qc-qmi-1.so
 blobs/gsm/lib/libril.so
 
 # GPS
-lib/libgeofence.so
+app/com.qualcomm.location.apk
+etc/permissions/com.qualcomm.location.xml
 lib/libloc_api_v02.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/liblocationservice.so
 
 # NFC
 lib/hw/nfc.MSM8960.so
