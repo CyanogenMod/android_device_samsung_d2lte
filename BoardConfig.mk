@@ -66,7 +66,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_INIT_VENDOR_LIB := libinit_d2lte
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/d2lte/init/init_d2lte.c
 
 # bluetooth
