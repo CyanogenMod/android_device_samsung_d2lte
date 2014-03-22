@@ -91,6 +91,7 @@ ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
   TARGET_ADD_ISO_MODE_1600 := true
 endif
 TARGET_NEED_DISABLE_FACE_DETECTION := true
+TARGET_NEED_SAMSUNG_CAMERA_MODE := true
 
 # Needed for blobs
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
