@@ -156,3 +156,6 @@ etc/wifi/wpa_supplicant.conf
 # Perf
 lib/libqc-opt.so
 
+# QuickBoot
+-app/QuickBoot.apk
+
