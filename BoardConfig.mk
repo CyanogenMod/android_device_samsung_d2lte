@@ -35,10 +35,6 @@ TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
-# WiFi module
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_MODULE_NAME := "dhd"
-
 # Adreno configuration
 BOARD_EGL_CFG := device/samsung/d2lte/configs/egl.cfg
 

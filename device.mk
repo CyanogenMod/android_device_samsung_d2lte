@@ -51,9 +51,15 @@ PRODUCT_COPY_FILES += \
         device/samsung/d2lte/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 # Wifi
+ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
         device/samsung/d2lte/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
         device/samsung/d2lte/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+else
+PRODUCT_COPY_FILES += \
+        device/samsung/d2lte/apexq-common/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+        device/samsung/d2lte/apexq-common/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+endif
 
 # Keymaps
 PRODUCT_COPY_FILES += \

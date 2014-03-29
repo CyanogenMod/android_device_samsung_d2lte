@@ -154,8 +154,6 @@ etc/wifi/nvram_net.txt
 etc/wifi/nvram_net.txt_murata
 etc/wifi/nvram_net.txt_murata_b2
 etc/wifi/nvram_net.txt:etc/wifi/nvram_net.txt_semcosh
-etc/wifi/wpa_supplicant.conf
-
 
 # Perf
 lib/libqc-opt.so
