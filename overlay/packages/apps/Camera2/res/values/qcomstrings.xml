@@ -1,0 +1,40 @@
+<!--
+    Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+    Copyright (C) 2013-2014 The CyanogenMod Project
+
+    Not a Contribution.
+
+    Copyright (C) 2007 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<resources>
+    <!-- Settings screen, ISO dialog radio button choices -->
+    <string name="pref_camera_iso_entry_auto">Auto</string>
+    <string name="pref_camera_iso_entry_iso50">ISO50</string>
+    <string name="pref_camera_iso_entry_iso100">ISO100</string>
+    <string name="pref_camera_iso_entry_iso200">ISO200</string>
+    <string name="pref_camera_iso_entry_iso400">ISO400</string>
+    <string name="pref_camera_iso_entry_iso800">ISO800</string>
+    <string name="pref_camera_iso_entry_iso1600">ISO1600</string>
+
+    <!-- ISO entry values. Do not translate. -->
+    <string name="pref_camera_iso_value_auto" translatable="false">auto</string>
+    <string name="pref_camera_iso_value_iso50" translatable="false">ISO50</string>
+    <string name="pref_camera_iso_value_iso100" translatable="false">ISO100</string>
+    <string name="pref_camera_iso_value_iso200" translatable="false">ISO200</string>
+    <string name="pref_camera_iso_value_iso400" translatable="false">ISO400</string>
+    <string name="pref_camera_iso_value_iso800" translatable="false">ISO800</string>
+    <string name="pref_camera_iso_value_iso1600" translatable="false">ISO1600</string>
+</resources>
