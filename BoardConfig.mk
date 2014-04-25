@@ -89,6 +89,8 @@ ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
   TARGET_NEED_CAMERA_ZSL := true
   TARGET_ADD_ISO_MODE_1600 := true
   TARGET_NEED_SAMSUNG_CAMERA_MODE := true
+else
+  TARGET_NEED_PREVIEW_SIZE_FIXUP := true
 endif
 TARGET_NEED_DISABLE_FACE_DETECTION := true
 
