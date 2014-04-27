@@ -18,5 +18,7 @@
 -->
 
 <resources>
-    <bool name="enableZSL">true</bool>
+    <bool name="enableZSL">false</bool>
+    <!-- Enable histogram support -->
+    <bool name="enableHistogram">false</bool>
 </resources>

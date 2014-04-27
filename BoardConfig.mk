@@ -43,7 +43,6 @@ WIFI_DRIVER_MODULE_NAME := "dhd"
 BOARD_EGL_CFG := device/samsung/d2lte/configs/egl.cfg
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/d2lte/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -89,6 +88,9 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
 ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
   TARGET_NEED_CAMERA_ZSL := true
   TARGET_ADD_ISO_MODE_1600 := true
+  TARGET_NEED_SAMSUNG_CAMERA_MODE := true
+else
+  TARGET_NEED_PREVIEW_SIZE_FIXUP := true
 endif
 TARGET_NEED_DISABLE_FACE_DETECTION := true
 
