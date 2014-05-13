@@ -40,7 +40,8 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
 # Adreno configuration
-BOARD_EGL_CFG := device/samsung/d2lte/configs/egl.cfg
+TARGET_QCOM_DISPLAY_VARIANT :=
+TARGET_QCOM_MEDIA_VARIANT :=
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
