@@ -94,8 +94,8 @@ void vendor_load_properties()
     } else if (strstr(bootloader, "L710")) {
         /* d2spr and d2spi */
         cdma_properties("1", "8", "310120", "Sprint", "1");
-        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.3/JSS15J/L710VPUCMK3:user/release-keys");
-        property_set("ro.build.description", "d2spr-user 4.3 JSS15J L710VPUCMK3 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.4.2/KOT49H/L710VPUDND8:user/release-keys");
+        property_set("ro.build.description", "d2spr-user 4.4.2 KOT49H L710VPUDND8 release-keys");
         property_set("ro.product.model", "SPH-L710");
         property_set("ro.product.device", "d2spr");
     } else if (strstr(bootloader, "S960L")) {

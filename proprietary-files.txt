@@ -1,25 +1,37 @@
 # Bins
 bin/mpdecision
-
-# Thermal
+bin/radish
 bin/thermald
+bin/time_daemon
 
 # Bluetooth firmware
-bin/bcm4334.hcd
-bin/bcm4334_murata.hcd
-bin/bcm4334_semco.hcd
+vendor/firmware/bcm4334.hcd
+vendor/firmware/bcm4334_murata.hcd
+vendor/firmware/bcm4334_semco.hcd
+
+# GPS
+-app/com.qualcomm.location.apk
+bin/gsiff_daemon
+etc/permissions/com.qualcomm.location.xml
+lib/libloc_api_v02.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/liblocationservice.so
 
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libcsd-client.so
 
 # mmparser extended
 lib/libExtendedExtractor.so
 lib/libmmparser.so
 lib/libmmosal.so
 lib/libdivxdrm.so
+lib/livDivxDrm.so
 
-# Adreno GPU (Available on Nexus 4)
+# Adreno GPU
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
@@ -82,13 +94,13 @@ blobs/vzw/lib/libril.so
 blobs/gsm/lib/libril-qc-qmi-1.so
 blobs/gsm/lib/libril.so
 
-# GPS
-lib/libgeofence.so
-lib/libloc_api_v02.so
-
 # NFC
 lib/hw/nfc.MSM8960.so
 #vendor/firmware/libpn544_fw.so
+
+# Time services
+bin/time_daemon
+-vendor/lib/libtime_genoff.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
@@ -110,7 +122,6 @@ lib/libsecnativefeature.so
 lib/libgemini.so
 lib/liboemcamera.so
 lib/libmmmpod.so
-lib/libmmstereo.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_statsproc30.so
@@ -139,7 +150,7 @@ cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 
 # General
-lib/libdiag.so
+vendor/lib/libdiag.so
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin_b2
