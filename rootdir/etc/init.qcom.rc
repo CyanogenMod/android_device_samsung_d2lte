@@ -214,8 +214,9 @@ on boot
 # import cne init file
 on post-fs
     #export_rc /persist/init.cne.rc
-    # Increase max readahead size to 256 KB
-    write /sys/block/mmcblk0/queue/read_ahead_kb 256
+    # Increase max readahead size to 512 KB
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+    write /sys/block/mmcblk1/queue/read_ahead_kb 512
     # for controlling write performance boosting
     chown system radio /sys/block/mmcblk0/bkops_en
     chmod 0664 /sys/block/mmcblk0/bkops_en
