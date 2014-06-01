@@ -205,11 +205,18 @@ on boot
     # overhead in the kernel. Turn it off.
     write /sys/block/mmcblk0/queue/add_random 0
 
+    # KSM
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/deferred_timer 1
+    write /sys/kernel/mm/ksm/run 1
+
 # import cne init file
 on post-fs
     #export_rc /persist/init.cne.rc
-    # Increase max readahead size to 256 KB
-    write /sys/block/mmcblk0/queue/read_ahead_kb 256
+    # Increase max readahead size to 512 KB
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+    write /sys/block/mmcblk1/queue/read_ahead_kb 512
     # for controlling write performance boosting
     chown system radio /sys/block/mmcblk0/bkops_en
     chmod 0664 /sys/block/mmcblk0/bkops_en
@@ -264,9 +271,12 @@ on post-fs-data
     chown root system /sys/class/leds/keyboard-backlight/max_brightness
     chmod 0664 /sys/class/leds/keyboard-backlight/max_brightness
 
-    # for BLN
+
+    # Touchkey
     chown root system /sys/devices/virtual/sec/sec_touchkey/touchkey_bln_enable
     chmod 0666 /sys/devices/virtual/sec/sec_touchkey/touchkey_bln_enable
+    chown system system /sys/class/sec/sec_touchkey/keypad_enable
+    chmod 0660 /sys/class/sec/sec_touchkey/keypad_enable
 
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
