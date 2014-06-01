@@ -83,10 +83,16 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8960
+    gps.msm8960 \
+    libgps.utils \
+    libloc_core \
+    libloc_eng
+
+GPS_CONF := device/samsung/d2lte/gps/etc/gps.conf
 
 PRODUCT_COPY_FILES += \
-    device/samsung/d2lte/gps/gps.conf:system/etc/gps.conf
+    $(GPS_CONF):/system/etc/gps.conf \
+    device/samsung/d2lte/gps/etc/sap.conf:/system/etc/sap.conf
 
 # Torch
 PRODUCT_PACKAGES += Torch
@@ -124,10 +130,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
     persist.radio.add_power_save=1 \
-    persist.radio.snapshot_disabled=1 \
+    persist.radio.snapshot_enabled=1 \
+    persist.radio.snapshot_timer=22 \
     com.qc.hardware=true \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.ril.transmitpower=true \
+    debug.composition.type=dyn \
+    debug.mdpcomp.maxlayer=3 \
     ro.opengles.version=131072 \
     persist.audio.vr.enable=false \
     persist.audio.speaker.location=high \
@@ -138,7 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data_netmgrd_nint=16 \
     lpa.decode=true \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
-    persist.radio.no_wait_for_card=0 \
+    persist.radio.no_wait_for_card=1 \
     keyguard.no_require_sim=true \
     media.aac_51_output_enabled=true \
     persist.rild.nitz_plmn="" \
