@@ -315,7 +315,7 @@ on property:qcom.thermal=thermald
 on property:qcom.thermal=thermal-engine
     start thermal-engine
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+service mpdecision /system/bin/mpdecision --avg_comp
     user root
     group root system
     disabled
