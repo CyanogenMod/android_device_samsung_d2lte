@@ -89,7 +89,6 @@ on early-boot
 
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
     setprop qcom.audio.init complete
-    setprop qcom.thermal thermal-engine
     exec /system/bin/sh /init.qcom.early_boot.sh ${ro.board.platform}
     chown bluetooth net_bt_stack /dev/ttyHS0
     chmod 0660 /dev/ttyHS0
