@@ -103,7 +103,7 @@ BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
 ifeq ($(filter cm_apexqtmo cm_expressatt cm_d2dcm,$(TARGET_PRODUCT)),)
 # Assert
-TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2spi,d2tfnspr,d2tmo,d2cri,d2mtr,d2usc,d2vmu,d2vzw,d2lte
+TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2spi,d2tfnspr,d2tmo,d2cri,d2mtr,d2usc,d2vmu,d2vzw,d2lte,d2can
 endif
 
 # Releasetools
