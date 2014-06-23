@@ -144,6 +144,7 @@ void gsm_properties()
 {
     property_set("ro.telephony.default_network", "9");
     property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.telephony.ril.v3", "newDialCode");
 }
 
 void cdma_properties(char default_cdma_sub[], char default_network[],
@@ -160,4 +161,5 @@ void cdma_properties(char default_cdma_sub[], char default_network[],
     property_set("ril.subscription.types", "NV,RUIM");
     property_set("ro.cdma.subscribe_on_ruim_ready", "true");
     property_set("ro.ril.svdo", "true");
+    property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
 }
