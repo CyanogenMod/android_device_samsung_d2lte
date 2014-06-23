@@ -235,6 +235,9 @@ on post-fs-data
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
 
+    mkdir /data/connectivity/nsrm 0771 system system
+    chown system system /data/connectivity/nsrm
+
     # For our prima brethren
     write /dev/wcnss_wlan 1
     write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
@@ -386,19 +389,11 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps qcom_diag log
     disabled
 
-service netmgrd /system/bin/netmgrd
-    class main
-    disabled
-
 #service sensors /system/bin/sensors.qcom
 #    class late_start
 #    user root
 #    group root
 #    disabled
-
-on property:ro.use_data_netmgrd=false
-    # netmgr not supported on specific target
-    stop netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -641,14 +636,8 @@ service ril-daemon /system/bin/rild
     class main
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
-    socket rild-cas stream 666  casdrm mmb
     user root
-    group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw
-
-service secril-daemon /system/bin/sec-ril
-    class main
-    user root
-    group radio cache inet misc audio sdcard_rw qcom_diag log
+    group radio cache inet misc audio log qcom_diag
 
 service ril-daemon1 /system/bin/rild -c 1
     class late_start
@@ -699,11 +688,6 @@ on property:vold.decrypt=trigger_restart_framework
 service macloader /system/bin/macloader
     class main
     oneshot
-
-service ssr_diag /system/bin/ssr_diag
-    class late_start
-    user system
-    group system
 
 #Disable boot timeout for external modems.
 on property:persist.sys.mdm.timeout_disable=1

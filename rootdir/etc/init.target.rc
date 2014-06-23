@@ -166,6 +166,9 @@ on post-fs-data
 
     # h2k permission
     chmod 0644 /efs/redata.bin
+    chown radio radio /efs/h2k.dat
+    chmod 0644 /efs/h2k.dat
+    chown system system /efs/drm/h2k
 
     # Permissions for Camera
     chown system radio /sys/class/camera/rear/rear_camfw
@@ -320,7 +323,9 @@ service mpdecision /system/bin/mpdecision --avg_comp
     group root system
     disabled
 
-service kickstart /system/bin/qcks -i /firmware/image
+service kickstart /system/bin/qcks -i /firmware-mdm/image/
+    user root
+    group radio cache inet misc audio sdcard_rw log system
     oneshot
     disabled
 
@@ -358,4 +363,9 @@ service bugreport /system/bin/dumpstate -d -p -B \
     disabled
     oneshot
     keycodes 114 115 116
+
+service secril-daemon /system/bin/sec-ril
+    class main
+    user root
+    group radio cache inet misc audio sdcard_rw diag log
 
