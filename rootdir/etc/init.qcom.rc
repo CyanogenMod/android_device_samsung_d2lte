@@ -386,19 +386,11 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps qcom_diag log
     disabled
 
-service netmgrd /system/bin/netmgrd
-    class main
-    disabled
-
 #service sensors /system/bin/sensors.qcom
 #    class late_start
 #    user root
 #    group root
 #    disabled
-
-on property:ro.use_data_netmgrd=false
-    # netmgr not supported on specific target
-    stop netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -645,11 +637,6 @@ service ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw
 
-service secril-daemon /system/bin/sec-ril
-    class main
-    user root
-    group radio cache inet misc audio sdcard_rw qcom_diag log
-
 service ril-daemon1 /system/bin/rild -c 1
     class late_start
     socket rild1 stream 660 root radio
@@ -699,11 +686,6 @@ on property:vold.decrypt=trigger_restart_framework
 service macloader /system/bin/macloader
     class main
     oneshot
-
-service ssr_diag /system/bin/ssr_diag
-    class late_start
-    user system
-    group system
 
 #Disable boot timeout for external modems.
 on property:persist.sys.mdm.timeout_disable=1
