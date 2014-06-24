@@ -100,57 +100,11 @@ PRODUCT_PACKAGES += \
     crda \
     macloader
 
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # Lights
 PRODUCT_PACKAGES += lights.msm8960
 
-# Increase the HWUI font cache since we have tons of RAM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.text_cache_width=2048
-
-# QC Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
-
 # QRNGD
 PRODUCT_PACKAGES += qrngd
-
-#common build.props
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0 \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    persist.radio.add_power_save=1 \
-    persist.radio.snapshot_disabled=1 \
-    com.qc.hardware=true \
-    persist.radio.apm_sim_not_pwdn=1 \
-    ro.ril.transmitpower=true \
-    ro.opengles.version=131072 \
-    persist.audio.vr.enable=false \
-    persist.audio.speaker.location=high \
-    persist.timed.enable=true \
-    persist.fuse_sdcard=true \
-    ro.emmc.sdcard.partition=17 \
-    ro.use_data_netmgrd=true \
-    persist.data_netmgrd_nint=16 \
-    lpa.decode=true \
-    rild.libpath=/system/lib/libsec-ril.so \
-    persist.radio.no_wait_for_card=0 \
-    keyguard.no_require_sim=true \
-    media.aac_51_output_enabled=true \
-    persist.rild.nitz_plmn="" \
-    persist.rild.nitz_long_ons_0="" \
-    persist.rild.nitz_long_ons_1="" \
-    persist.rild.nitz_long_ons_2="" \
-    persist.rild.nitz_long_ons_3="" \
-    persist.rild.nitz_short_ons_0="" \
-    persist.rild.nitz_short_ons_1="" \
-    persist.rild.nitz_short_ons_2="" \
-    persist.rild.nitz_short_ons_3="" \
-    dalvik.vm.dexopt-data-only=0
 
 ifneq ($(TARGET_PRODUCT),cm_apexqtmo)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,11 +112,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.handset.mic=digital \
     ro.qc.sdk.audio.fluencetype=fluence
 endif
-
-# enable repeatable keys in cwm
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cwm.enable_key_repeat=true \
-    ro.cwm.repeatable_keys=114,115
 
 # NFC Support
 PRODUCT_PACKAGES += \
@@ -189,5 +138,3 @@ ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 else
     $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 endif
-
-

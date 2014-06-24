@@ -1,5 +1,41 @@
 # system.prop for d2lte
 #
 
-rild.libargs=-d /dev/smd0
+com.qc.hardware=true
+dalvik.vm.dexopt-data-only=0
+keyguard.no_require_sim=true
+lpa.decode=true
+media.aac_51_output_enabled=true
+persist.audio.speaker.location=high
+persist.audio.vr.enable=false
+persist.data_netmgrd_nint=16
+persist.fuse_sdcard=true
+persist.radio.add_power_save=1
+persist.radio.apm_sim_not_pwdn=1
 persist.radio.mode_pref_nv10=1
+persist.radio.no_wait_for_card=0
+persist.radio.snapshot_disabled=1
+persist.rild.nitz_long_ons_0=""
+persist.rild.nitz_long_ons_1=""
+persist.rild.nitz_long_ons_2=""
+persist.rild.nitz_long_ons_3=""
+persist.rild.nitz_plmn=""
+persist.rild.nitz_short_ons_0=""
+persist.rild.nitz_short_ons_1=""
+persist.rild.nitz_short_ons_2=""
+persist.rild.nitz_short_ons_3=""
+persist.sys.usb.config=mtp
+persist.timed.enable=true
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libsec-ril.so
+ro.cwm.enable_key_repeat=true
+ro.cwm.repeatable_keys=114,115
+ro.emmc.sdcard.partition=17
+ro.hwui.text_cache_width=2048
+ro.opengles.version=131072
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+ro.ril.transmitpower=true
+ro.use_data_netmgrd=true
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+wifi.interface=wlan0
