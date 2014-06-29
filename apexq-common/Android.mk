@@ -1,4 +1,4 @@
-ifneq ($(filter apexqtmo expressatt,$(TARGET_DEVICE)),)
+ifneq ($(filter aegis2vzw apexqtmo expressatt,$(TARGET_DEVICE)),)
 
 LOCAL_PATH:= $(call my-dir)
 

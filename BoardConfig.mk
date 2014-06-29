@@ -85,7 +85,7 @@ BOARD_HAVE_DOCK_USBAUDIO := true
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
 #TARGET_NEED_DISABLE_AUTOFOCUS := true
-ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
+ifeq ($(filter cm_aegis2vzw cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
   TARGET_NEED_CAMERA_ZSL := true
   TARGET_ADD_ISO_MODE_1600 := true
   TARGET_NEED_SAMSUNG_CAMERA_MODE := true
@@ -101,7 +101,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_USES_SEPERATED_VOIP := true
 BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
-ifeq ($(filter cm_apexqtmo cm_expressatt cm_d2dcm,$(TARGET_PRODUCT)),)
+ifeq ($(filter cm_aegis2vzw cm_apexqtmo cm_expressatt cm_d2dcm,$(TARGET_PRODUCT)),)
 # Assert
 TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2spi,d2tfnspr,d2tmo,d2cri,d2mtr,d2usc,d2vmu,d2vzw,d2lte,d2can
 endif

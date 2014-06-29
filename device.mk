@@ -23,13 +23,13 @@ $(call inherit-product-if-exists, vendor/samsung/d2lte/d2lte-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2lte/overlay
 
 ## Common overlays for the non-d2s
-ifneq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
+ifneq ($(filter cm_aegis2vzw cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2lte/apexq-common/overlay
 endif
 
 # Boot animation and screen size
 
-ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
+ifeq ($(filter cm_aegis2vzw cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
@@ -185,7 +185,7 @@ PRODUCT_COPY_FILES += \
 # common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
 
-ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
+ifeq ($(filter cm_aegis2vzw cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
     $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 else
     $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
