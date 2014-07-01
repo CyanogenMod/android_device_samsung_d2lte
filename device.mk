@@ -128,6 +128,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.ril.transmitpower=true \
+    debug.composition.type=dyn \
     ro.opengles.version=131072 \
     persist.audio.vr.enable=false \
     persist.audio.speaker.location=high \

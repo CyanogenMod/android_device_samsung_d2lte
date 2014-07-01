@@ -58,8 +58,8 @@ void vendor_load_properties()
     if (strstr(bootloader, "I747M")) {
         /* d2can */
         gsm_properties();
-        property_set("ro.build.fingerprint", "samsung/d2vl/d2can:4.3/JSS15J/I747MVLUEMK5:user/release-keys");
-        property_set("ro.build.description", "d2vl-user 4.3 JSS15J I747MVLUEMK5 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2vl/d2can:4.4.2/KOT49H/I747MVLUFNE6:user/release-keys");
+        property_set("ro.build.description", "d2vl-user 4.4.2 KOT49H I747MVLUFNE6 release-keys");
         property_set("ro.product.device", "d2can");
         property_set("ro.product.model", "SGH-I747M");
     } else if (strstr(bootloader, "I747")) {
@@ -72,8 +72,8 @@ void vendor_load_properties()
     } else if (strstr(bootloader, "R530C")) {
         /* d2cri */
         cdma_properties("0", "8", "310090", "Cricket", "0");
-        property_set("ro.build.fingerprint", "samsung/d2cri/d2cri:4.1.2/JZO54K/R530CVVBMD6:user/release-keys");
-        property_set("ro.build.description", "d2cri-user 4.1.2 JZO54K R530CVVBMD6 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2cri/d2cri:4.4.2/KOT49H/R530CVVUDNE4:user/release-keys");
+        property_set("ro.build.description", "d2cri-user 4.4.2 KOT49H R530CVVUDNE4 release-keys");
         property_set("ro.product.model", "SCH-R530C");
         property_set("ro.product.device", "d2cri");
     } else if (strstr(bootloader, "SC06D")) {
@@ -94,8 +94,8 @@ void vendor_load_properties()
     } else if (strstr(bootloader, "L710")) {
         /* d2spr and d2spi */
         cdma_properties("1", "8", "310120", "Sprint", "1");
-        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.3/JSS15J/L710VPUCMK3:user/release-keys");
-        property_set("ro.build.description", "d2spr-user 4.3 JSS15J L710VPUCMK3 release-keys");
+        property_set("ro.build.fingerprint", "samsung/d2spr/d2spr:4.4.2/KOT49H/L710VPUDND8:user/release-keys");
+        property_set("ro.build.description", "d2spr-user 4.4.2 KOT49H L710VPUDND8 release-keys");
         property_set("ro.product.model", "SPH-L710");
         property_set("ro.product.device", "d2spr");
     } else if (strstr(bootloader, "S960L")) {
@@ -122,8 +122,8 @@ void vendor_load_properties()
     } else if (strstr(bootloader, "I535")) {
         /* d2vzw */
         cdma_properties("0", "10", "311480", "Verizon", "0");
-        property_set("ro.build.fingerprint", "Verizon/d2vzw/d2vzw:4.3/JSS15J/I535VRUCML1:user/release-keys");
-        property_set("ro.build.description", "d2vzw-user 4.3 JSS15J I535VRUCML1 release-keys");
+        property_set("ro.build.fingerprint", "Verizon/d2vzw/d2vzw:4.4.2/KOT49H/I535VRUDNE1:user/release-keys");
+        property_set("ro.build.description", "d2vzw-user 4.4.2 KOT49H I535VRUDNE1 release-keys");
         property_set("ro.product.model", "SCH-I535");
         property_set("ro.product.device", "d2vzw");
     } else if (strstr(bootloader, "S968C")) {
