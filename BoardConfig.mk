@@ -36,8 +36,12 @@ TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # WiFi module
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
+BOARD_HAVE_SAMSUNG_WIFI := true
+WIFI_BAND := 802_11_ABG
+WIFI_DRIVER_MODULE_AP_ARG := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_MODULE_NAME := "dhd"
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 
 # Adreno configuration
 BOARD_EGL_CFG := device/samsung/d2lte/configs/egl.cfg
