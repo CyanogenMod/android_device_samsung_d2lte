@@ -100,6 +100,9 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_USES_SEPERATED_VOIP := true
 BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
+# We have the new GPS driver
+BOARD_HAVE_NEW_QC_GPS := true
+
 ifeq ($(filter cm_apexqtmo cm_expressatt cm_d2dcm,$(TARGET_PRODUCT)),)
 # Assert
 TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2spi,d2tfnspr,d2tmo,d2cri,d2mtr,d2usc,d2vmu,d2vzw,d2lte,d2can
