@@ -1,5 +1,11 @@
 # system.prop for d2lte
 #
 
+# audio
+persist.audio.fluence.mode=endfire
+persist.audio.handset.mic=digital
+ro.qc.sdk.audio.fluencetype=fluence
+
+# radio
 rild.libargs=-d /dev/smd0
-persist.radio.mode_pref_nv10=1
+rild.libpath=/system/lib/libril-qc-qmi-1.so
