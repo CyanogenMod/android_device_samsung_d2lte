@@ -133,6 +133,13 @@ void vendor_load_properties()
         property_set("ro.build.description", "d2vzw-user 4.3 JSS15J I535VRUCML1 release-keys");
         property_set("ro.product.model", "SCH-S968C");
         property_set("ro.product.device", "d2vzw");
+    } else if (strstr(bootloader, "I547")) {
+        /* comanche */
+        gsm_properties();
+        property_set("ro.build.fingerprint", "samsung/comancheuc/comancheatt:4.1.2/JZO54K/I547UCCMH5:user/release-keys");
+        property_set("ro.build.description", "comancheuc-user 4.1.2 JZO54K I547UCCMH5 release-keys");
+        property_set("ro.product.device", "comanche");
+        property_set("ro.product.model", "SAMSUNG-SGH-I547");
     }
 
     property_get("ro.product.device", device);
