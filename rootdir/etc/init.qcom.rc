@@ -271,12 +271,15 @@ on post-fs-data
     chown root system /sys/class/leds/keyboard-backlight/max_brightness
     chmod 0664 /sys/class/leds/keyboard-backlight/max_brightness
 
-
     # Touchkey
     chown root system /sys/devices/virtual/sec/sec_touchkey/touchkey_bln_enable
     chmod 0666 /sys/devices/virtual/sec/sec_touchkey/touchkey_bln_enable
     chown system system /sys/class/sec/sec_touchkey/keypad_enable
     chmod 0660 /sys/class/sec/sec_touchkey/keypad_enable
+
+    # Color Calibration
+    chown root system /sys/class/misc/gammacontrol/tuner
+    chmod 0664 /sys/class/misc/gammacontrol/tuner
 
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
@@ -773,3 +776,27 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor performance
+
+on charger
+    mount_all fstab.qcom
+    class_start charger
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/module/rpm_resources/enable_low_power/L2_cache 1
+    write /sys/module/rpm_resources/enable_low_power/pxo 1
+    write /sys/module/rpm_resources/enable_low_power/vdd_dig 1
+    write /sys/module/rpm_resources/enable_low_power/vdd_mem 1
+    write /sys/module/pm_8x60/modes/cpu0/power_collapse/suspend_enabled 1
+    write /sys/module/pm_8x60/modes/cpu1/power_collapse/suspend_enabled 1
+    write /sys/module/pm_8x60/modes/cpu0/standalone_power_collapse/suspend_enabled 1
+    write /sys/module/pm_8x60/modes/cpu1/standalone_power_collapse/suspend_enabled 1
+    write /sys/module/pm_8x60/modes/cpu0/standalone_power_collapse/idle_enabled 1
+    write /sys/module/pm_8x60/modes/cpu1/standalone_power_collapse/idle_enabled 1
+    write /sys/module/pm_8x60/modes/cpu0/power_collapse/idle_enabled 0
+    write /sys/module/pm_8x60/modes/cpu1/power_collapse/idle_enabled 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu1/online 0
+
+service charger /charger
+    class charger
+    critical

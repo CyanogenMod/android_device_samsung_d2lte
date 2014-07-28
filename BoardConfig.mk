@@ -36,8 +36,7 @@ TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # WiFi module
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_MODULE_NAME := "dhd"
+WIFI_DRIVER_FW_PATH_P2P     :=
 
 # Adreno configuration
 BOARD_EGL_CFG := device/samsung/d2lte/configs/egl.cfg
@@ -100,6 +99,9 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 # Audio
 BOARD_USES_SEPERATED_VOIP := true
 BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
+
+# We have the new GPS driver
+BOARD_HAVE_NEW_QC_GPS := true
 
 ifeq ($(filter cm_apexqtmo cm_expressatt cm_d2dcm,$(TARGET_PRODUCT)),)
 # Assert

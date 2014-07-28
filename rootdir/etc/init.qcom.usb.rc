@@ -31,6 +31,8 @@ on init
 
 on boot
     write /sys/class/android_usb/f_mass_storage/inquiry_string "Samsung"
+    write /sys/class/android_usb/android0/iManufacturer samsung
+    write /sys/class/android_usb/android0/iProduct d2lte
 
 service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
     class core
@@ -166,7 +168,7 @@ on property:sys.usb.config=mass_storage
     write /sys/class/android_usb/android0/idProduct 685B
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/enable 1
-    write /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file /dev/block/vold/179:96
+    write /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file /dev/block/mmcblk1p1
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mass_storage,adb
@@ -177,7 +179,7 @@ on property:sys.usb.config=mass_storage,adb
     write /sys/class/android_usb/android0/functions mass_storage,adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
-    write /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file /dev/block/vold/179:96
+    write /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file /dev/block/mmcblk1p1
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mass_storage,mtp
