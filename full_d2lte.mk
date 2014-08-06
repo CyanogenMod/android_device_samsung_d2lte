@@ -32,3 +32,6 @@ PRODUCT_DEVICE := d2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := d2lte
+
+# GMS_ClientID_Base
+PRODUCT_GMS_CLIENTID_BASE := android-verizon
