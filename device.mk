@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/d2lte/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
+    libnetcmdiface
 
 # common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
