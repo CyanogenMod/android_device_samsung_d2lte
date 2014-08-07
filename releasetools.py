@@ -18,6 +18,7 @@
 
 def FullOTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_substring("I535", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp -R /system/blobs/vzw/* /system/"));')
+  info.script.AppendExtra('ifelse(is_substring("I535", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox sed -i \'s/ro.com.google.clientidbase=android-google/ro.com.google.clientidbase=android-verizon/g\' /system/build.prop"));')
   info.script.AppendExtra('ifelse(is_substring("R530", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp -R /system/blobs/r530/* /system/"));')
   info.script.AppendExtra('ifelse(is_substring("L710", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp -R /system/blobs/spr/* /system/"));')
   info.script.AppendExtra('ifelse(is_substring("S960L", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp -R /system/blobs/spr/* /system/"));')
