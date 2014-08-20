@@ -114,7 +114,7 @@ void vendor_load_properties()
         property_set("ro.product.device", "d2tmo");
     } else if (strstr(bootloader, "R530U")) {
         /* d2usc */
-        cdma_properties("0", "8", "311580", "U.S.Cellular", "1");
+        cdma_properties("0", "8", "311580", "U.S.Cellular", "0");
         property_set("ro.build.fingerprint", "samsung/d2usc/d2usc:4.1.1/JRO03L/R530UVXALK5:user/release-keys");
         property_set("ro.build.description", "d2usc-user 4.1.1 JRO03L R530UVXALK5 release-keys");
         property_set("ro.product.model", "SCH-R530U");
