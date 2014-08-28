@@ -8,4 +8,5 @@ ro.qc.sdk.audio.fluencetype=fluence
 
 # radio
 rild.libargs=-d /dev/smd0
-rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libpath=/system/lib/libsec-ril.so
+ro.telephony.ril.v3=newDialCode
