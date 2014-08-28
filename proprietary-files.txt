@@ -17,15 +17,14 @@ lib/libchromatix_s5k6a3yx_vt_hd.so
 lib/libchromatix_s5k6a3yx_vt.so
 
 # Radio
-bin/sec-ril
-blobs/gsm/lib/libril-qc-qmi-1.so
 blobs/gsm/lib/libril.so
-blobs/r530/lib/libril-qc-qmi-1.so
+blobs/gsm/lib/libsec-ril.so
 blobs/r530/lib/libril.so
-blobs/spr/lib/libril-qc-qmi-1.so
+blobs/r530/lib/libsec-ril.so
 blobs/spr/lib/libril.so
-blobs/vzw/lib/libril-qc-qmi-1.so
+blobs/spr/lib/libsec-ril.so
 blobs/vzw/lib/libril.so
+blobs/vzw/lib/libsec-ril.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
