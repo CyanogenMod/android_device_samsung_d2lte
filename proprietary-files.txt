@@ -17,15 +17,40 @@ lib/libchromatix_s5k6a3yx_vt_hd.so
 lib/libchromatix_s5k6a3yx_vt.so
 
 # Radio
-bin/sec-ril
-blobs/gsm/lib/libril-qc-qmi-1.so
+bin/ds_fmc_appd
+bin/efsks
+bin/ks
+bin/qcks
+bin/qmiproxy
+bin/qmuxd
+bin/rild
+bin/rmt_storage
 blobs/gsm/lib/libril.so
-blobs/r530/lib/libril-qc-qmi-1.so
+blobs/gsm/lib/libsec-ril.so
 blobs/r530/lib/libril.so
-blobs/spr/lib/libril-qc-qmi-1.so
+blobs/r530/lib/libsec-ril.so
 blobs/spr/lib/libril.so
-blobs/vzw/lib/libril-qc-qmi-1.so
+blobs/spr/lib/libsec-ril.so
 blobs/vzw/lib/libril.so
+blobs/vzw/lib/libsec-ril.so
+lib/libatparser.so
+lib/libfactoryutil.so
+lib/libomission_avoidance.so
+lib/libreference-ril.so
+lib/libsecril-client.so
+lib/libxml.so
+vendor/lib/libconfigdb.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
