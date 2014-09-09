@@ -16,6 +16,15 @@ lib/libchromatix_s5k6a3yx_smart_stay.so
 lib/libchromatix_s5k6a3yx_vt_hd.so
 lib/libchromatix_s5k6a3yx_vt.so
 
+# GPS
+bin/irsc_util
+etc/sec_config
+lib/libloc_api_v02.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/liblocationservice.so
+
 # Radio
 bin/ds_fmc_appd
 bin/efsks
