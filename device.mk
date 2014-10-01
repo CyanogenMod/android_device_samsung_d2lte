@@ -34,6 +34,17 @@ PRODUCT_COPY_FILES += \
     device/samsung/d2lte/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
     device/samsung/d2lte/audio/audio_policy.conf:system/etc/audio_policy.conf
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8960 \
+    libgps.utils \
+    libloc_core \
+    libloc_eng
+
+PRODUCT_COPY_FILES += \
+    device/samsung/d2lte/gps/etc/gps.conf:system/etc/gps.conf \
+    device/samsung/d2lte/gps/etc/sap.conf:system/etc/sap.conf
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     device/samsung/d2lte/keylayout/fsa9485.kl:system/usr/keylayout/fsa9485.kl \
