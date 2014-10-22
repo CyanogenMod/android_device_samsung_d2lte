@@ -32,7 +32,8 @@ TARGET_OTA_ASSERT_DEVICE := d2att,d2spr,d2spi,d2tfnspr,d2tmo,d2cri,d2mtr,d2usc,d
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Kernel
-TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/d2
+TARGET_KERNEL_CONFIG := cyanogen_d2_defconfig
 
 # Audio
 BOARD_HAVE_AUDIENCE_A2220 := true
