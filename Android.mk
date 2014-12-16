@@ -17,6 +17,9 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),d2lte)
+
+$(error The d2lte tree is now dead, please use a variant repo. Terminating the build because you really REALLY don't want to flash a d2lte build, even if it does compile.)
+
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 FIRMWARE_DSPS_IMAGES := \
